@@ -22,8 +22,8 @@ if (!empty($_POST)) {
         die("<script>alert('Tiada gambar dipilih'); window.history.back(); </script>");
     }
 
-    $sql_simpan = "INSERT INTO menu (gambar, IDMenu, NamaMenu, Harga, KategoriMenu)
-                   VALUES ('$filename', '{$_POST['id']}', '{$_POST['nama']}', '{$_POST['harga']}', '{$_POST['KategoriMenu']}')";
+    $sql_simpan = "INSERT INTO menu (gambar, IDMenu, NamaMenu, Harga, ciri, KategoriMenu)
+                   VALUES ('$filename', '{$_POST['id']}', '{$_POST['nama']}', '{$_POST['harga']}', '{$_POST['ciri']}',  '{$_POST['KategoriMenu']}')";
 
     $laksana_sql = mysqli_query($condb, $sql_simpan);
 

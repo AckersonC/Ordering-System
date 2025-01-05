@@ -1,0 +1,112 @@
+body {
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+h3 {
+    text-align: center;
+    color: #333;
+    background: #fff8e7; /* Light beige background relevant to food */
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.menu-container {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.categories {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.categories a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates a flexible grid layout */
+    gap: 20px; /* Space between the cards */
+    justify-content: center;
+}
+
+.card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    height: 400px; /* Fixed height for all cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures even spacing within the card */
+}
+
+.card-img {
+    width: 100%; /* Ensures all images are the same width */
+    height: 150px; /* Ensures all images are the same height */
+    border-radius: 10px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.card-content {
+    margin-top: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h4 {
+    margin: 10px 0 5px 0; /* Reduced space below the title */
+    flex-grow: 1; /* Allows the title to grow and use available space */
+}
+
+.card-content p {
+    margin: 5px 0; /* Ensures minimal space between the elements */
+    color: #333;
+}
+
+h2{
+    font-size: larger;
+}
+
+.add-to-cart-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #af7b2c; /* Matching color scheme */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #5a3921; /* Darker shade for hover effect */
+}
+
+
+.content-container {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

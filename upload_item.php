@@ -13,20 +13,21 @@ include('staff_guard.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="upload.css">
-    <title>Muat Naik Data Staff</title>
+    <title>Muat Naik Data Item</title>
 </head>
 <body>
 <div class="content-container">
 <!--Tajuk laman -->
-<h3>Muat Naik Data Staff (*.txt)</h3>
+<h3>Muat Naik Data Item (*.txt)</h3>
 
 <!-- Borang utk memuat naik fail -->
-<form action='proses_upload_staff.php' method='POST' enctype='multipart/form-data'>
+<form action='proses_upload_item.php' method='POST' enctype='multipart/form-data'>
     <div class="input-file-container">
-        <input type='file' name='data_staff' id='data_staff' class='input-file'>
-        <label for='data_staff' class='label-file'>Sila pilih fail txt yang ingin dimuat naik</label>
+        <input type='file' name='data_item' id='data_item' class='input-file'>
+        <label for='data_item' class='label-file'>Sila pilih fail txt yang ingin dimuat naik</label>
     </div>
-    <input type='submit' name='btn_upload'>
+    <input type='submit' name='btn_upload'><br><br>
+    <small>*Sila kemaskini gambar item kemudian*</small>
 </form>
 </div>
 <?php include('footer.php');?>

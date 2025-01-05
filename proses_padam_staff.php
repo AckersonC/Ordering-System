@@ -12,7 +12,7 @@ if(!empty($_GET))
     include('connection.php');
 
     #arahan untuk memadam data pengguna berdasarkan idpengguna yang dihantar(GET)
-    $arahan = "delete from staff where idstaff='".$_GET['staffid']."'";
+    $arahan = "delete from staff where idstaff='".$_GET['idstaff']."'";
 
     #melaksanakan arahan dan menguji proses padam rekod
     if(mysqli_query($condb,$arahan))

@@ -7,8 +7,7 @@ if (!empty($_POST)) {
     include ('connection.php');
 
     #data validation: had atas had bawah
-    if(strlen($_POST['idstaff']) !=3 or !is_numeric($_POST['idstaff']) or
-    strlen($_POST['kodlaluan_staff']) !=4 or !is_numeric($_POST['kodlaluan_staff'])) 
+    if(strlen($_POST['idstaff']) !=3 or !is_numeric($_POST['idstaff']))
     {
         die("<script>alert ('Ralat Pada No. ID');
         window.location.href='pendaftaran_staff.php'; </script>");

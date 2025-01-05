@@ -12,26 +12,29 @@ if(empty($_GET)){
     die("<script>window.loacation.href='senarai_pengguna.php';</script>");
 }
 ?>
+<title>Kemaskini Data Pengguna</title>
+<!-- Link to the external CSS file -->
+<link rel="stylesheet" href="pendaftaran.css">
+<div class="content-container">
 
-<h3>Kemaskini Data Pengguna</h3>
+    <h3>Kemaskini Data Pengguna</h3>
 
-<form action='proses_kemaskini_pengguna.php?idpengguna_lama=<?= $_GET['idpengguna'] ?>' method='POST'>
+    <form action='proses_kemaskini_pengguna.php?idpengguna_lama=<?= $_GET['idpengguna'] ?>' method='POST'>
 
-Nama:
-<input type='text' name='nama' value='<?= $_GET['namapengguna'] ?>' required><br><br>
+    <div>Nama:
+    <input type='text' name='nama' value='<?= $_GET['namapengguna'] ?>' required></div>
 
-No. ID:
-<input type='text' name='id'value='<?= $_GET['idpengguna'] ?>' required><br><br>
+    <div>No. ID:
+    <input type='text' name='id'value='<?= $_GET['idpengguna'] ?>' required></div>
 
-Kod Laluan:
-<input type='text' name='kod_laluan'value='<?= $_GET['kodlaluan'] ?>' required><br><br>
+    <div>Kata Laluan:
+    <input type='text' name='kod_laluan'value='<?= $_GET['kodlaluan'] ?>' required></div>
 
-No Tel:
-<input type='text' name='notel'value='<?= $_GET['notel'] ?>' required><br><br>
+    <div>No Tel:
+    <input type='text' name='notel'value='<?= $_GET['notel'] ?>' required></div>
 
-Alamat:
-<input type='text' name='alamat'value='<?= $_GET['alamat'] ?>' required><br><br>
-<input type='submit' value='Kemaskini'>
-        
-</form>
+    <input type='submit' value='Kemaskini'>
+            
+    </form>
+</div>
 <?php include ('footer.php');?>

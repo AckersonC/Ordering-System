@@ -1,0 +1,140 @@
+body {
+     background-image: url('img/background.jpg');
+     background-size: cover;
+     background-attachment: fixed;
+ }
+ 
+ h3 {
+     text-align: center;
+     color: #333;
+     background: #fff8e7; 
+     padding: 7px;
+     border-radius: 10px;
+     width: 50%;
+     margin: 20px auto;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ h4 {
+     text-align: center;
+     color: #333;
+     background: #fff8e7; 
+     padding: 7px;
+     border-radius: 10px;
+     width: 100%;
+     margin: 20px auto;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ 
+ form {
+     background: #fff8e7; 
+     padding: 20px;
+     border-radius: 10px;
+     width: 47.5%;
+     margin: 20px auto;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     text-align: center;
+ }
+ 
+ form div {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 10px;
+     text-align: left;
+ }
+ 
+ form div label {
+     flex: 1;
+ }
+ 
+ form div input[type='text'], form div input[type='password'] {
+     flex: 2;
+     width: auto;
+     padding: 4px; /* Reduced padding for shorter height */
+     font-size: 14px; /* Adjusted font size for smaller height */
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     background-color: #F5F0E1; /* Background color */
+ }
+ 
+ input[type='submit'] {
+     background-color: #af7b2c;
+     color: white;
+     border: none;
+     padding: 10px 15px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+     border-radius: 5px;
+     transition: background-color 0.3s;
+ }
+ 
+ input[type='submit']:hover {
+     background-color: #5a3921;
+ }
+ 
+ form .small-text { /* New class for small text styling */
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     margin-bottom: 10px;
+ }
+ 
+ form .small-text small {
+     color: #505050; /* Change color to red */
+     font-size: 12px; /* Adjust font size if needed */
+     margin-left: 175px; /* Add space to align with input fields */
+ }
+ 
+ form input::placeholder {
+     color: #888;
+ }
+ 
+
+ .content-container {
+     animation: fadeIn 1s ease-in forwards;
+ }
+ 
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+     to {
+         opacity: 1;
+     }
+ }
+
+ .input-file-container {
+     position: relative;
+     width: 100%;
+     margin-bottom: 20px;
+ }
+ 
+ .input-file {
+     display: none; /* Hide the default file input */
+ }
+ 
+ .label-file {
+     display: inline-block;
+     padding: 10px 20px;
+     cursor: pointer;
+     background-color: #af7b2c; /* Color theme consistent with login page */
+     color: white;
+     border: none;
+     border-radius: 5px;
+     text-align: center;
+     font-size: 16px;
+     width: 100%;
+ }
+ 
+ .label-file:hover {
+     background-color: #5a3921;
+ }
+ 
+ 

@@ -1,0 +1,78 @@
+body {
+     background-image: url('img/background.jpg');
+     background-size: cover;
+     background-attachment: fixed;
+ }
+ 
+ h3 {
+     text-align: center;
+     color: #333;
+     background: #fff8e7; /* Light beige background relevant to food */
+     padding: 10px;
+     border-radius: 10px;
+     width: 50%;
+     margin: 20px auto;
+ }
+ 
+ .flex-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 90%;
+     margin: 20px auto;
+ }
+ 
+ .table-container {
+     width: 90%;
+     margin: 20px auto;
+     border-radius: 10px;
+
+ }
+ 
+ table {
+     width: 100%; /* Set width to 100% so it fits within the container */
+     border-collapse: collapse;
+     border-spacing: 0; /* Ensure there's no extra spacing around the borders */
+     background: #fff; /* Solid white background */
+     margin: 20px auto; /* Center the table */
+     border-radius: 10px;
+     overflow: hidden;
+ }
+ 
+ table, th, td {
+     border: 1px solid #ccc; /* Add a black border to table cells */
+
+ }
+ 
+ th, td {
+     padding: 10px;
+     text-align: left;
+ }
+ 
+ th {
+     background-color: #f2f2f2; /* Light grey background for table headers */
+     border-bottom: 2px solid #d4a373; /* Add a bottom border to headers */
+     text-align: center;
+ }
+ 
+ tr:nth-child(even) {
+     background-color: #f9f9f9; /* Alternating row colors */
+ }
+ 
+ tr:hover {
+     background-color: #f1f1f1; /* Shade on hover */
+ }
+ 
+ .content-container {
+     animation: fadeIn 1s ease-in forwards;
+ }
+ 
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+     to {
+         opacity: 1;
+     }
+ }
+ 

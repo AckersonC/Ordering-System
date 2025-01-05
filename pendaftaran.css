@@ -1,0 +1,131 @@
+body {
+     background-image: url('img/background.jpg');
+     background-size: cover;
+     background-attachment: fixed;
+ }
+ 
+ header {
+     background: rgba(255, 255, 255, 0.8);
+     padding: 10px 20px;
+     border-radius: 10px;
+     width: 80%;
+     margin: 20px auto;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     text-align: center;
+ }
+ 
+ header h1, header nav {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ h3 {
+     text-align: center;
+     color: #333;
+     background: #fff8e7; 
+     padding: 7px;
+     border-radius: 10px;
+     width: 50%;
+     margin: 20px auto;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ form {
+     background: #fff8e7; 
+     padding: 20px;
+     border-radius: 10px;
+     width: 47.5%;
+     margin: 20px auto;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     text-align: center;
+ }
+ 
+ input[type='text'], input[type='password'] {
+     width: 70%;
+     padding: 4px; /* Reduced padding for shorter height */
+     font-size: 14px; /* Adjusted font size for smaller height */
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     background-color: #F5F0E1; /* Background color */
+ }
+ 
+ input[type='submit'] {
+     background-color: #af7b2c;
+     color: white;
+     border: none;
+     padding: 10px 15px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+     border-radius: 5px;
+     transition: background-color 0.3s;
+ }
+ 
+ input[type='submit']:hover {
+     background-color: #5a3921;
+ }
+
+ 
+ 
+ form div {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 10px;
+     text-align: left;
+ }
+
+
+
+select{
+    width: 400px;
+    padding: 4px; /* Reduced padding for shorter height */
+    font-size: 14px; /* Adjusted font size for smaller height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #F5F0E1; /* Background color */
+    position: relative;
+    margin-left: 113px;
+}
+ 
+ form input::placeholder {
+     color: #888;
+ }
+ .content-container {
+     animation: fadeIn 1s ease-in forwards;
+ }
+ 
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+     to {
+         opacity: 1;
+     }
+ }
+
+ .password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.eye-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+ 
+ 

@@ -27,6 +27,7 @@ if(!empty($_POST['idstaff']) and !empty($_POST['kodlaluan_staff']))
         #mengumpukkan kepada pembolehubah session tahap
         $_SESSION['idstaff'] = $m["idstaff"];
         $_SESSION['tahap'] = "staff";
+        $_SESSION['nama'] = $m["namastaff"];
 
         #membukakan laman index.php
         echo"<script>window.location.href='index.php';</script>";
@@ -42,6 +43,6 @@ else
 {
     #jika tidada data yang dihantar dari laman login.php
     echo"<script>alert('Sila masukkan ID Pengguna dan Kod Laluan');
-    window.location.href='login.php';</script>";
+    window.location.href='login_staff.php';</script>";
 }
 ?>

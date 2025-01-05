@@ -12,20 +12,25 @@ if(empty($_GET)){
     die("<script>window.loacation.href='senarai_staff.php';</script>");
 }
 ?>
+<title>Kemaskini Data Staff</title>
+<!-- Link to the external CSS file -->
+<link rel="stylesheet" href="pendaftaran.css">
+<div class="content-container">
 
-<h3>Kemaskini Data Staff</h3>
+    <h3>Kemaskini Data Staff</h3>
 
-<form action='proses_kemaskini_staff.php?idstaff_lama=<?= $_GET['idstaff'] ?>' method='POST'>
+    <form action='proses_kemaskini_staff.php?idstaff_lama=<?= $_GET['idstaff'] ?>' method='POST'>
 
-Nama:
-<input type='text' name='nama' value='<?= $_GET['namastaff'] ?>' required><br><br>
+    <div>Nama:
+    <input type='text' name='nama' value='<?= $_GET['namastaff'] ?>' required></div>
 
-No. ID:
-<input type='text' name='id'value='<?= $_GET['idstaff'] ?>' required><br><br>
+    <div>No. ID:
+    <input type='text' name='id'value='<?= $_GET['idstaff'] ?>' required></div>
 
-Kod Laluan:
-<input type='text' name='kod_laluan'value='<?= $_GET['kodlaluan_staff'] ?>' required><br><br>
-<input type='submit' value='Kemaskini'>
-        
-</form>
+    <div>Kata Laluan:
+    <input type='text' name='kod_laluan'value='<?= $_GET['kodlaluan_staff'] ?>' required></div>
+    <input type='submit' value='Kemaskini'>
+            
+    </form>
+</div>
 <?php include ('footer.php');?>

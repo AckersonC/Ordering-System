@@ -7,9 +7,7 @@ if (!empty($_POST)) {
     include ('connection.php');
 
     #data validation: had atas had bawah
-    if(strlen($_POST['idpengguna']) !=3 or !is_numeric($_POST['idpengguna']) or 
-    strlen($_POST['notel']) !=3 or !is_numeric($_POST['notel']) or 
-    strlen($_POST['kodlaluan']) !=4 or !is_numeric($_POST['kodlaluan'])) 
+    if(strlen($_POST['idpengguna']) !=3 or !is_numeric($_POST['idpengguna']) )
     {
         die("<script>alert ('Ralat Pada No. ID');
         window.location.href='pendaftaran.php'; </script>");
@@ -17,10 +15,10 @@ if (!empty($_POST)) {
 
     #arahan SQL untuk menyimpan data pembeli baru
     $sql_simpan = "insert into pengguna
-    (idpengguna, notel, kodlaluan, nama, alamat)
+    (idpengguna, notel, kodlaluan, nama)
     values
     ('".$_POST['idpengguna']."', '".$_POST['notel']."', '".$_POST['kodlaluan']."', 
-    '".$_POST['nama']."', '".$_POST['alamat']."')";
+    '".$_POST['nama']."')";
 
     #melaksanakan arahan simpan data pembeli baru
     $laksana_query = mysqli_query($condb, $sql_simpan);
@@ -30,7 +28,7 @@ if (!empty($_POST)) {
     {
         #jika berjaya, papar popup dan buka fail index.php
         echo"(<script>alert('Pendaftaran Berjaya');
-        window.location.href='index.php'; </script>";
+        window.location.href='login.php'; </script>";
     }
     else
     {

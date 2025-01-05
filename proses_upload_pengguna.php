@@ -29,12 +29,12 @@ if(isset($_POST['btn_upload']))
             $pecahkanbaris=explode("|",$ambilbarisdata);
 
             #selepas pecahan tadiakan diumpukkna kepada 3
-            list($namapengguna, $alamatpengguna, $notelpengguna, $idpengguna, $kodlaluan_pengguna) = $pecahkanbaris;
+            list($namapengguna, $notelpengguna, $idpengguna, $kodlaluan_pengguna) = $pecahkanbaris;
 
             #arahn sql untuk menyimpan data
             $arahan_sql_simpan="insert into pengguna
-            (Nama, Alamat, NoTel, IDPengguna, KodLaluan) values
-            ('$namapengguna', '$alamatpengguna', '$notelpengguna', '$idpengguna', '$kodlaluan_pengguna')";
+            (Nama, NoTel, IDPengguna, KodLaluan) values
+            ('$namapengguna', '$notelpengguna', '$idpengguna', '$kodlaluan_pengguna')";
 
             #memasukkan data kedalam jadual staff
             $laksana_arahan_simpan=mysqli_query($condb, $arahan_sql_simpan);

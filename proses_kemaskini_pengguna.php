@@ -24,8 +24,7 @@ if(!empty($_POST))
     Nama   =       '".$_POST['nama']."',
     IDPengguna   =       '".$_POST['id']."',
     KodLaluan   =       '".$_POST['kod_laluan']."',
-    NoTel   =       '".$_POST['notel']."',
-    Alamat   =       '".$_POST['alamat']."'
+    NoTel   =       '".$_POST['notel']."'
     where
     idpengguna        =       '".$_GET['idpengguna_lama']."'";
 

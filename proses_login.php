@@ -26,9 +26,11 @@ if(!empty($_POST['idpengguna']) and !empty($_POST['kodlaluan']))
 
         #mengumpukkan kepada pembolehubah session tahap
         $_SESSION['tahap'] = 'pengguna';
+        $_SESSION['nama'] = $m['Nama'];
+        $_SESSION['id'] = $m['IDPengguna'];
 
         #membukakan laman index.php
-        echo"<script>window.location.href='index.php';</script>";
+        echo"<script>window.location.href='menu.php';</script>";
     }
     else
     {

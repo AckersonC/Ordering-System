@@ -23,8 +23,8 @@
 
 <!--Kod untuk butang mengubah saiz tulisan-->
 | Ubah Saiz Tulisan |
-<input name='reSize1' type='button' value='Reset' onclick='ubahsaiz(2)'/>
-<input name='reSize' type='button' value='&nbsp;+&nbsp;' onclick='ubahsaiz(1)'/>
-<input name='reSize2' type='button' value='&nbsp;-&nbsp;' onclick='ubahsaiz(-1)'/>
+<input name='rb' type='button' value='Reset' onclick='ubahsaiz(2)'/>
+<input name='r' type='button' value='&nbsp;+&nbsp;' onclick='ubahsaiz(1)'/>
+<input name='rk' type='button' value='&nbsp;-&nbsp;' onclick='ubahsaiz(-1)'/>
 |
 <button onclick="window.print()">Cetak</button>

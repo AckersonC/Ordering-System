@@ -1,0 +1,252 @@
+body {
+     background-image: url('img/background.jpg');
+     background-size: cover;
+     background-attachment: fixed;
+ }
+ 
+ h3 {
+     text-align: center;
+     color: #333;
+     background: #fff8e7; /* Light beige background relevant to food */
+     padding: 10px;
+     border-radius: 10px;
+     width: 50%;
+     margin: 20px auto;
+ }
+ 
+ .button, .button-link, .font-button {
+     background-color: #fff8e7; /* Match header background color */
+     color: #333;
+     border: none;
+     padding: 10px 20px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 5 5px; /* Horizontal margin only */
+     cursor: pointer;
+     border-radius: 5px;
+     
+
+ }
+
+ .kemaskini-button-link{
+    background-color: lightgreen; /* Match header background color */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5 5px; /* Horizontal margin only */
+    cursor: pointer;
+    border-radius: 5px;
+    
+
+}
+
+.hapus-button-link {
+    background-color: lightcoral; /* Match header background color */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5 5px; /* Horizontal margin only */
+    cursor: pointer;
+    border-radius: 5px;
+    
+
+}
+ 
+
+
+
+ .flex-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 90%;
+     margin: 20px auto;
+ }
+ 
+ .table-container {
+     width: 90%;
+     margin: 20px auto;
+     border-radius: 10px;
+     overflow: hidden; /* To ensure the border radius is applied to the entire table */
+ }
+ 
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     background: #fff; /* Solid white background */
+ }
+ 
+ table, th, td {
+     border: 1px solid #ccc; /* Add a light border */
+ }
+ 
+ th, td {
+     padding: 10px;
+     text-align: left;
+ }
+ 
+ th {
+     background-color: #f2f2f2; /* Light grey background for table headers */
+     border-bottom: 2px solid #d4a373; /* Add a bottom border to headers */
+     text-align: center;
+ }
+ 
+ tr:nth-child(even) {
+     background-color: #f9f9f9; /* Alternating row colors */
+ }
+ 
+ tr:hover {
+     background-color: #f1f1f1; /* Shade on hover */
+ }
+ 
+ /* Popup styles */
+ .popup {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background: #fff;
+     padding: 20px;
+     border-radius: 10px;
+     display: none;
+     z-index: 1000;
+     color: #d4a373;
+ }
+ 
+ .popup-overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     display: none;
+     z-index: 999;
+ }
+ 
+ .close-button {
+     display: inline-block;
+     margin-left: 400px;
+     cursor: pointer;
+     font-weight: bold;
+     color: #d4a373;
+ }
+ 
+ .close-button:hover {
+     color: #5a3921;
+ }
+
+ p{
+    color: #d4a373;
+    text-align: center;
+}
+
+/* Style for the form */
+form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for the input field container */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* Space below the input field and label */
+}
+
+/* Style for the input field and submit button */
+input[type="text"],
+input[type="submit"],
+button[type="button"],
+select {
+    margin: 5px; /* Add margin around input fields */
+    padding: 4px; /* Reduced padding for shorter height */
+    font-size: 14px; /* Adjusted font size for smaller height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #F5F0E1; /* Background color */
+}
+
+/* Style for the submit button */
+input[type="submit"],
+button[type="button"] {
+    background-color: #af7b2c; /* Change this to your desired color */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+
+
+.button-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the submit button on hover */
+input[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: #5a3921; /* Change this to a darker shade for hover effect */
+}
+
+.content-container {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Additional styling for the form inside the popup */
+.popup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Add margin to the select element and the submit button */
+.popup form select {
+    margin-bottom: 15px; /* Add space below the dropdown */
+}
+
+
+
+
+
+/* Style for the submit button on hover */
+.popup form input[type="submit"]:hover {
+    background-color: #5a3921; /* Change this to a darker shade for hover effect */
+}
+
+
+
+
+
+
+
+
+ 

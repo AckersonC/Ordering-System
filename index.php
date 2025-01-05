@@ -1,50 +1,84 @@
 <?php
-#Memulakan fungsi session
+# Memulakan fungsi session
 session_start();
 
-#Memanggil fail header.php dan fail connection.php
+# Memanggil fail header.php dan fail connection.php
 include('header.php');
 include('connection.php');
 ?>
+<title>Laman Utama</title>
+<!-- Link to the external CSS file -->
+<link rel="stylesheet" href="index.css">
+<!-- Link to the external JavaScript file -->
+<script src="index.js"></script>
 
-<hr>
-<h3>Nikmatilah Warisan Malaysia Dengan Citarasa Anda<h3>
-<?php
-    #arahan SQL untuk memaparkan item yang tersedia
-    #5 item yang tersedia
-    $sql_pilihan = "
-    SELECT namamenu, harga, kategorimenu, gambar FROM menu
-    ORDER BY CASE WHEN kategorimenu = 'makanan' THEN 1 ELSE 0 END DESC, namamenu ASC";
+<div class="slideshow-container content-container">
+    <div class="mySlides fade">
+        <img src="img/promo1.jpg" style="width:100%">
+        <div class="slideshow-text">Promosi Istimewa - Nasi Lemak Diskaun 20%</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="img/promo2.jpg" style="width:100%">
+        <div class="slideshow-text">Hidangan Baru - Laksa Johor</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="img/promo3.jpg" style="width:100%">
+        <div class="slideshow-text">Promosi Harian - Beli 1 Percuma 1 Air Tebu</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="img/promo4.jpg" style="width:100%">
+        <div class="slideshow-text">Slogan Kami - Mendorong Kami Untuk Menhidang Anda Dengan Lebih Baik</div>
+    </div>
+</div>
+<div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
 
-    #melaksanakan arahan sql_pilihan
-    $laksana_pilihan = mysqli_query($condb, $sql_pilihan);
+<div class="content-container">
+    <h2>3 Pesanan Paling Tinggi</h2>
 
-    #jika tiada data yang dijumpai
-    if(mysqli_num_rows($laksana_pilihan)==0){
-        #papar TIada barangan yang telah direkodkan
-        echo "Tiada barangan yang telah direkodkan";
-    }
-    else {
-        echo "<hr>";
-        #jika terdapat barangan yang ditemui
-        #papar dalam bentuk jadual.
-        echo"<table border='1'>
-                    <tr>
-                        <td style='text-align: center;'>Gambar</td>
-                        <td style='width: 200px; text-align: center;'>Nama Item</td>
-                        <td style='width: 200px; text-align: center;'>Harga</td>
-                    </tr>";
-    
-#Pembolehubah $n mengambil data yang ditemui
-    while($n=mysqli_fetch_array($laksana_pilihan)){
-        #memaparkan semula data diambil oleh pembolehubah $n
-        echo "  <tr>
-                    <td><img width='150px%' src='img/".$n['gambar']."'></td>
-                    <td style='width: 200px; text-align: center;'>".$n['namamenu']."</td>
-                    <td style='width: 200px; text-align: center;'>".$n['harga']."</td>
-                </tr>";
+    <div class="container">
+    <?php
+        # Arahan SQL untuk memaparkan item yang tersedia
+        $sql_pilihan = "
+        SELECT namamenu, harga, kategorimenu, ciri, gambar FROM menu
+        ORDER BY CASE WHEN kategorimenu = 'makanan' THEN 1 ELSE 0 END DESC, namamenu ASC
+        LIMIT 3"; # Adjusted to select only top 3 items
+
+        # Melaksanakan arahan sql_pilihan
+        $laksana_pilihan = mysqli_query($condb, $sql_pilihan);
+
+        # Jika tiada data yang dijumpai
+        if (mysqli_num_rows($laksana_pilihan) == 0) {
+            echo "Tiada barangan yang telah direkodkan";
+        } else {
+            $ranks = ['gold', 'silver', 'bronze'];
+            $index = 0;
+
+            # Jika terdapat barangan yang ditemui, papar dalam bentuk kad
+            while ($n = mysqli_fetch_array($laksana_pilihan)) {
+                $rank = $ranks[$index++];
+                echo "<div class='card $rank'>
+                        <div class='card-inner'>
+                            <div class='card-front'>
+                                <img src='img/" . $n['gambar'] . "' alt='" . $n['namamenu'] . "'>
+                                <h3>" . $n['namamenu'] . "</h3>
+                            </div>
+                            <div class='card-back'>
+                                <h3>" . $n['namamenu'] . "</h3>
+                                <p>" . $n['ciri'] . "</p>
+                                <p>Harga: " . $n['harga'] . "</p>
+                                <a href='login.php' class='button-order'>Pesan</a>
+                            </div>
+                        </div>
+                    </div>";
+            }
         }
-        echo"</table>";
-    }
-?>
-<?php include ('footer.php'); ?>
+    ?>
+    </div>
+</div>
+
+<?php include('footer.php'); ?>
